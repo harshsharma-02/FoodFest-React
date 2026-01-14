@@ -19,7 +19,7 @@
 
 .dark-mode-toggle:hover {
   transform: scale(1.1);
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 10px rgba(209, 204, 204, 0.3);
 }
 
 .dark-mode-toggle svg {
@@ -45,6 +45,10 @@
 .dark-mode-toggle.active .moon-icon {
   opacity: 1;
   transform: rotate(0deg);
+}
+.dark-mode-toggle.active .form-group label {
+
+  color: antiquewhite;
 }
 
 @media (max-width: 768px) {
