@@ -1,0 +1,62 @@
+/* Clients section styling */
+
+#client-section {
+  padding: 5rem 2rem;
+  background: linear-gradient(135deg, var(--dark-color), var(--primary-color));
+  position: relative;
+}
+
+#client-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('../assets/img/bg.jpg') center/cover no-repeat;
+  opacity: 0.1;
+  z-index: 0;
+}
+
+#client-section h1 {
+  text-align: center;
+  color: var(--white);
+  margin-bottom: 3rem;
+  position: relative;
+  z-index: 1;
+}
+
+#clients {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+  position: relative;
+  z-index: 1;
+}
+
+.client-item {
+  background: var(--white);
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.client-item:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+}
+
+.client-item img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  transition: var(--transition);
+}
+
+.client-item:hover img {
+  transform: scale(1.1);
+}
+

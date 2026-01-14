@@ -1,0 +1,10 @@
+/* Footer styling */
+
+footer {
+  background: var(--dark-color);
+  color: var(--white);
+  text-align: center;
+  padding: 2rem;
+  font-size: 1rem;
+}
+

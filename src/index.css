@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+
+/* Reset and base styles + shared utilities */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Bree Serif', serif;
+  line-height: 1.6;
+  color: #333;
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+/* CSS Variables */
+:root {
+  --primary-color: #e74c3c;
+  --secondary-color: #f39c12;
+  --accent-color: #e67e22;
+  --dark-color: #2c3e50;
+  --light-color: #ecf0f1;
+  --white: #ffffff;
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-hover: 0 8px 15px rgba(0, 0, 0, 0.2);
+  --transition: all 0.3s ease;
+}
+
+.btn {
+  padding: 1rem 2.5rem;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: var(--white);
+  border: none;
+  border-radius: 25px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 12px 35px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+}
+
+.btn:hover::before {
+  left: 100%;
+}
+
+.h-primary {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.h-secondary {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.center {
+  text-align: center;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Dark mode theme (matches original project) */
+.dark-mode {
+  --primary-color: #8b5cf6;
+  --secondary-color: #f59e0b;
+  --accent-color: #ec4899;
+  --dark-color: #111827;
+  --light-color: #1f2937;
+  --white: #f9fafb;
+  --text-color: #f3f4f6;
+  --bg-color: #0f172a;
+  --card-bg: #1e293b;
+  --border-color: #334155;
+}
+
+.dark-mode body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.dark-mode #navbar {
+  background: linear-gradient(135deg, #1a202c, var(--primary-color));
+}
+
+.dark-mode #home {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url('./assets/img/3d-dark-abstract-wallpaper.jpg') center/cover no-repeat;
+}
+
+.dark-mode #home::before {
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8));
+}
+
+.dark-mode #services-container {
+  background: var(--light-color);
+}
+
+.dark-mode #services .box {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+}
+
+.dark-mode #services .box h2 {
+  color: var(--text-color);
+}
+
+.dark-mode #services .box p {
+  color: #bdc3c7;
+}
+
+.dark-mode #client-section {
+  background: linear-gradient(135deg, #1a202c, var(--primary-color));
+}
+
+.dark-mode .client-item {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+}
+
+.dark-mode #contact {
+  background: var(--light-color);
+}
+
+.dark-mode #contact-box {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+}
+
+.dark-mode .form-group input,
+.dark-mode .form-group textarea {
+  background: var(--bg-color);
+  border-color: var(--border-color);
+  color: var(--text-color);
+}
+
+.dark-mode .form-group input:focus,
+.dark-mode .form-group textarea:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(255, 107, 107, 0.1);
+}
+
+.dark-mode #food-catalogue {
+  background: linear-gradient(135deg, var(--light-color), var(--bg-color));
+}
+
+.dark-mode .food-category {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+}
+
+.dark-mode .food-item {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+}
+
+.dark-mode .food-info h3 {
+  color: var(--text-color);
+}
+
+.dark-mode .food-info p {
+  color: #bdc3c7;
+}
+
+.dark-mode .h-primary,
+.dark-mode .h-secondary {
+  color: var(--text-color);
+}
+
+.dark-mode .category-title {
+  color: var(--text-color);
+}
+
+.dark-mode footer {
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* You can now copy the rest of your existing CSS (navigation, sections, responsive, dark mode, etc.)
+   from style.css into this file to fully match the original design. */

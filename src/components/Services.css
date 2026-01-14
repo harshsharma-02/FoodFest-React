@@ -1,0 +1,84 @@
+/* Services section styling */
+
+#services-container {
+  padding: 5rem 2rem;
+  background: var(--light-color);
+}
+
+#services-container h1 {
+  text-align: center;
+  margin-bottom: 3rem;
+  color: var(--dark-color);
+  position: relative;
+}
+
+#services-container h1::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: var(--primary-color);
+  border-radius: 2px;
+}
+
+#services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#services .box {
+  background: var(--white);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+#services .box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+}
+
+#services .box:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-hover);
+}
+
+#services .box img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  transition: var(--transition);
+}
+
+#services .box:hover img {
+  transform: scale(1.05);
+}
+
+#services .box h2 {
+  color: var(--dark-color);
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+#services .box p {
+  color: #666;
+  line-height: 1.8;
+}
+
