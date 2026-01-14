@@ -1,22 +1,19 @@
 import './App.css'
 import Navbar from './components/Navbar'
-import Home from './components/Home'
-import Services from './components/Services'
-import FoodCatalogue from './components/FoodCatalogue'
-import Clients from './components/Clients'
-import Contact from './components/Contact'
 import Footer from './components/Footer'
+import HomePage from './components/HomePage'
+import ScrollToHash from './ScrollToHash'
+import { Routes, Route } from 'react-router-dom'
 
 function App() {
   return (
     <>
       <Navbar />
+      <ScrollToHash />
       <main>
-        <Home />
-        <Services />
-        <FoodCatalogue />
-        <Clients />
-        <Contact />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+        </Routes>
       </main>
       <Footer />
     </>
